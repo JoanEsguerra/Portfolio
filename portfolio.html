@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Portfolio Project | Joan Esguerra</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00d4ff;
+            --secondary: #0a192f;
+            --accent: #64ffda;
+            --dark: #0a192f;
+            --darker: #020c1b;
+            --light: #ccd6f6;
+            --text: #8892b0;
+            --card-bg: #112240;
+            --shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+            --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            line-height: 1.6;
+            color: var(--text);
+            background: linear-gradient(135deg, var(--darker), var(--secondary));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        h1 {
+            color: var(--light);
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .project-info {
+            background: rgba(2, 12, 27, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 3px solid var(--accent);
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .info-label {
+            color: var(--light);
+            font-weight: 600;
+        }
+
+        .info-value {
+            color: var(--accent);
+        }
+
+        .redirect-message {
+            background: rgba(100, 255, 218, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid var(--accent);
+        }
+
+        .countdown {
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            color: var(--accent);
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 1px solid var(--accent);
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background: rgba(100, 255, 218, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--darker);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary);
+        }
+
+        .icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .url-display {
+            background: rgba(2, 12, 27, 0.7);
+            padding: 10px;
+            border-radius: 4px;
+            margin: 15px 0;
+            font-family: monospace;
+            word-break: break-all;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <i class="fab fa-github"></i>
+        </div>
+        
+        <h1>GitHub Portfolio</h1>
+        <h2>Personal Portfolio Website</h2>
+        
+        <p>A responsive portfolio website showcasing my skills, projects, and professional background as a BSIS student and UI designer.</p>
+        
+        <div class="project-info">
+            <div class="info-item">
+                <span class="info-label">Role:</span>
+                <span class="info-value">Designer & Developer</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Technologies:</span>
+                <span class="info-value">HTML, CSS, JavaScript</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Platform:</span>
+                <span class="info-value">GitHub Pages</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Status:</span>
+                <span class="info-value">Live</span>
+            </div>
+        </div>
+        
+        <div class="redirect-message">
+            <p>Redirecting to GitHub portfolio...</p>
+            <div class="countdown" id="countdown">5</div>
+            <div class="url-display">
+                https://angelaavilaa.github.io/github_portfolio/
+            </div>
+        </div>
+        
+        <div class="action-buttons">
+            <a href="https://angelaavilaa.github.io/github_portfolio/" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Live Site
+            </a>
+            <a href="Front.html" class="btn">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Countdown and redirect
+        let countdown = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(function() {
+            countdown--;
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.href = 'https://angelaavilaa.github.io/github_portfolio/';
+            }
+        }, 1000);
+        
+        // Manual redirect if user clicks anywhere on the page (except buttons)
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.btn')) {
+                window.location.href = 'https://angelaavilaa.github.io/github_portfolio/';
+            }
+        });
+    </script>
+</body>
+</html>
